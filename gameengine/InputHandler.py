@@ -1,7 +1,20 @@
 import sys, pygame
 
 class InputHandler:
+
+    __instance = None
+    
+    @staticmethod
+    def get_instance():
+        if InputHandler.__instance == None:
+            InputHandler()
+        return InputHandler.__instance
+
     def __init__(self):
+        if InputHandler.__instance != None:
+            raise Exception("InputHandler Singleton Error")
+        else:
+            InputHandler.__instance = self
         self.mouse_state = MouseState()
 
     def update(self):

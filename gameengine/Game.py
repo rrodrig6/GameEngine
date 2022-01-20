@@ -10,7 +10,7 @@ class Game:
         self.border_width = 128
         self.black = 0, 0, 0
         self.screen = pygame.display.set_mode(self.screen_size)
-        self.input_handler = InputHandler()
+        
         pc = GameObject()
         b = GameObject()
         b.rect.x = 128
@@ -19,7 +19,7 @@ class Game:
         self.game_objects.add(b)
 
     def process_events(self):
-        self.input_handler.update()
+        InputHandler.get_instance().update()
 
     def draw(self):
         self.screen.fill(self.black)
