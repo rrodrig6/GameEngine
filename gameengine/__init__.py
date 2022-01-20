@@ -10,5 +10,6 @@ def main():
     
 
 if __name__ == "__main__":
-    print (sys.version)
+    print(sys.version)
+    print(pygame.get_sdl_version())
     main()

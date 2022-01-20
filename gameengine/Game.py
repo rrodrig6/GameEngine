@@ -1,5 +1,6 @@
 import sys, pygame
 from GameObject import *
+from InputHandler import *
 
 class Game:
     def __init__(self):
@@ -9,6 +10,7 @@ class Game:
         self.border_width = 128
         self.black = 0, 0, 0
         self.screen = pygame.display.set_mode(self.screen_size)
+        self.input_handler = InputHandler()
         pc = GameObject()
         b = GameObject()
         b.rect.x = 128
@@ -16,11 +18,8 @@ class Game:
         self.game_objects = pygame.sprite.Group(pc)
         self.game_objects.add(b)
 
-
     def process_events(self):
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT: sys.exit()
-
+        self.input_handler.update()
 
     def draw(self):
         self.screen.fill(self.black)
