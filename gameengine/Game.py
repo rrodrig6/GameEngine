@@ -1,5 +1,6 @@
 import sys, pygame
 from GameObject import *
+from PlayerObject import *
 from InputHandler import *
 
 class Game:
@@ -11,7 +12,7 @@ class Game:
         self.black = 0, 0, 0
         self.screen = pygame.display.set_mode(self.screen_size)
         
-        pc = GameObject()
+        pc = PlayerObject()
         b = GameObject()
         b.rect.x = 128
         b.rect.y = 256
