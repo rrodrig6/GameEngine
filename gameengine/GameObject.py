@@ -1,10 +1,10 @@
 import pygame
 
 class GameObject(pygame.sprite.Sprite):
-    def __init__(self):
+    def __init__(self, asset_manager):
         super().__init__()
-        self.image = pygame.Surface([64, 64])
-        self.image.fill(pygame.color.Color(255,0,0))
+        self.image = asset_manager.images["square_red_64x"]
+        print("GameObject image: "+str(id(self.image)))
         self.speed = [4,4]
         self.rect = self.image.get_rect()
 

@@ -4,9 +4,10 @@ from GameObject import *
 from InputHandler import *
 
 class PlayerObject(GameObject):
-    def __init__(self):
-        super().__init__()
-        self.image.fill(pygame.color.Color(0,0,255))
+    def __init__(self, asset_manager):
+        super().__init__(asset_manager)
+        self.image = asset_manager.images["square_blue_64x"]
+        print("PlayerObject image: "+str(id(self.image)))
         self.last_button_state = False
 
     def update(self, *args, **kwargs):
