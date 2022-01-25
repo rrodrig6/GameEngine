@@ -1,0 +1,17 @@
+# Images
+-
+  name: circle_blue_64x
+  path: circle_blue_64x.png
+  alpha: none
+-
+  name: circle_red_64x
+  path: circle_red_64x.png
+  alpha: none
+-
+  name: square_blue_64x
+  path: square_blue_64x.png
+  alpha: none
+-
+  name: square_red_64x
+  path: square_red_64x.png
+  alpha: none

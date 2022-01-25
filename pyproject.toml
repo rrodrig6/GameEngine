@@ -7,6 +7,7 @@ authors = ["rrodrig6 <rrodrig6@uccs.edu>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 pygame = "^2.1.2"
+PyYAML = "^6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

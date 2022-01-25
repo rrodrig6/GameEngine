@@ -1,4 +1,4 @@
-import pygame
+import pygame, os, yaml
 
 from GameObject import *
 from PlayerObject import *
@@ -9,16 +9,16 @@ class Level:
         self.game_objects = pygame.sprite.Group()
 
     def load(self, asset_manager):
-        pc = PlayerObject(asset_manager)
-        b = GameObject(asset_manager)
-        b.rect.x = 128
-        b.rect.y = 256
-        c = GameObject(asset_manager)
-        c.rect.x = 256
-        c.rect.y = 128
-        self.game_objects.add(pc)
-        self.game_objects.add(b)
-        self.game_objects.add(c)
+
+        with open('data\levels.yml', 'r') as stream:
+            level = yaml.safe_load(stream)
+        for object in level['level1']['objects']:
+            print(object['class'] + str(object['x']) + "," + str(object['y']))
+            object_constructor = globals()[object['class']]
+            new_object = object_constructor(asset_manager)
+            new_object.rect.x = object['x']
+            new_object.rect.y = object['y']
+            self.game_objects.add(new_object)
 
     def draw(self,*args, **kwargs):
         self.background_sprites.draw(kwargs['screen'])
