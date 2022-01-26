@@ -6,7 +6,7 @@ from InputHandler import *
 class PlayerObject(GameObject):
     def __init__(self, asset_manager):
         super().__init__(asset_manager)
-        self.image = asset_manager.images["square_blue_64x"]
+        self.image = asset_manager.images["tstar"]
         print("PlayerObject image: "+str(id(self.image)))
         self.last_button_state = False
 

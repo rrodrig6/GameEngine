@@ -12,4 +12,11 @@ class AssetManager:
             images = yaml.safe_load(stream)
         for image in images:
             image_surface = pygame.image.load(os.path.join('assets', image['path']))
-            self.images[image['name']] = pygame.Surface.convert(image_surface)
+            if image['alpha']=='pixel':
+                self.images[image['name']] = pygame.Surface.convert_alpha(image_surface)
+            elif image['alpha']=='none':
+                self.images[image['name']] = pygame.Surface.convert(image_surface)
+            else:
+                self.images[image['name']] = pygame.Surface.convert(image_surface)
+                self.images[image['name']].set_colorkey(pygame.Color(image['alpha']['R'], image['alpha']['G'], image['alpha']['B']))
+                self.images[image['name']].get_colorkey()

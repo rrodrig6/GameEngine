@@ -3,7 +3,7 @@ import pygame
 class GameObject(pygame.sprite.Sprite):
     def __init__(self, asset_manager):
         super().__init__()
-        self.image = asset_manager.images["square_red_64x"]
+        self.image = asset_manager.images["circle_red_64x"]
         print("GameObject image: "+str(id(self.image)))
         self.speed = [4,4]
         self.rect = self.image.get_rect()
