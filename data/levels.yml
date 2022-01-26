@@ -1,0 +1,14 @@
+level1:
+  objects: 
+    -
+      class: GameObject
+      x: 128
+      y: 256
+    -
+      class: GameObject
+      x: 256
+      y: 128
+    -
+      class: PlayerObject
+      x: 0
+      y: 0
