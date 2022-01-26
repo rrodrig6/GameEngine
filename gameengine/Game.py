@@ -18,12 +18,12 @@ class Game:
         InputHandler.get_instance().update()
 
     def draw(self):
-        self.screen.fill(pygame.Color(0,128,0))
+        self.screen.fill(pygame.Color(0,0,0))
         self.level.draw(screen = self.screen)
         pygame.display.flip()
 
     def loop(self):
-        self.clk.tick(60)
+        self.clk.tick(30)
         self.process_events()   
         self.level.update(game = self)
         self.draw()

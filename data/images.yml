@@ -25,3 +25,8 @@
   name: square_red_64x
   path: square_red_64x.png
   alpha: none
+
+-
+  name: sheet
+  path: animated\sheet.png
+  alpha: none
