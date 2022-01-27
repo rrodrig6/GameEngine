@@ -1,14 +1,40 @@
 level1:
   objects: 
-    -
-      class: GameObject
+    - class: GameObject
       x: 128
       y: 256
-    -
-      class: GameObject
+      components:
+        - class: ImageComponent
+          arguments:
+            image_name: 'square_blue_64x'
+            column_count: 1
+            frame_count: 1
+            width: 64
+            height: 64
+            rate : 1
+
+    - class: GameObject
       x: 256
       y: 128
-    -
-      class: PlayerObject
+      components:
+        - class: ImageComponent
+          arguments:
+            image_name: 'square_red_64x'
+            column_count: 1
+            frame_count: 1
+            width: 64
+            height: 64
+            rate : 1
+
+    - class: PlayerObject
       x: 0
       y: 0
+      components:
+        - class: ImageComponent
+          arguments:
+            image_name: 'sheet'
+            column_count: 5
+            frame_count: 20
+            width: 64
+            height: 64
+            rate : 5

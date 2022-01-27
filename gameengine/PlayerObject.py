@@ -4,9 +4,8 @@ from GameObject import *
 from InputHandler import *
 
 class PlayerObject(GameObject):
-    def __init__(self, asset_manager):
-        super().__init__(asset_manager)
-        self.image = asset_manager.images["tstar"]
+    def __init__(self):
+        super().__init__()
         self.last_button_state = False
 
     def update(self, *args, **kwargs):

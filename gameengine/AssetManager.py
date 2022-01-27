@@ -2,7 +2,19 @@ import os, pygame, yaml
 
 class AssetManager:
 
+    __instance = None
+
+    @staticmethod
+    def get_instance():
+        if AssetManager.__instance == None:
+            AssetManager()
+        return AssetManager.__instance
+
     def __init__(self):
+        if AssetManager.__instance != None:
+            raise Exception("AssetManager Singleton Error")
+        else:
+            AssetManager.__instance = self
         self.images = {}
         self.load_images()
 
