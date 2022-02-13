@@ -4,7 +4,8 @@ import sys, pygame
 from Game import *
 
 def main():
-    game = Game()
+    game = Game.get_instance()
+    game.start()
     while 1:
         game.loop()
     

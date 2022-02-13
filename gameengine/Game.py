@@ -3,14 +3,34 @@ import sys, pygame
 from InputHandler import *
 from AssetManager import *
 from Level import *
+from ImageComponent import *
 
 class Game:
+
+    __instance = None
+
+    @staticmethod
+    def get_instance():
+        if Game.__instance == None:
+            Game()
+        return Game.__instance
+
     def __init__(self):
+        if Game.__instance != None:
+            raise Exception("Game Singleton Error")
+        else:
+            Game.__instance = self
+
+    
+    def start(self):
         self.clk = pygame.time.Clock()
         pygame.init()
         self.screen_size = self.screen_width, self.screen_height = 640, 480
         self.screen = pygame.display.set_mode(self.screen_size)
-        AssetManager.get_instance()
+        self.asset_manager = AssetManager()
+
+        ImageComponent.game = Game.get_instance()
+
         self.level = Level()
         self.level.load()
 
