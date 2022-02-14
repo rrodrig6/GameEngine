@@ -3,6 +3,7 @@ import pygame, yaml
 from GameObject import *
 from PlayerObject import *
 from ImageComponent import *
+from behaviorcomponent import *
 
 class Level:
     def __init__(self):

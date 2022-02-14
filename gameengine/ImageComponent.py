@@ -49,7 +49,7 @@ class ImageComponent(yaml.YAMLObject, pygame.sprite.Sprite):
     def register_groups(self) -> None:
         ImageComponent.game.level.draw_objects.add(self)
 
-    def update(self) -> None:
+    def update(self, *args, **kwargs) -> None:
         self.rate_count = self.rate_count + 1
         if self.rate_count >= self.rate:
             self.rate_count = 0

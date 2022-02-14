@@ -1,12 +1,14 @@
 - !GameObject
     components:
       - !ImageComponent
-          image_name: 'square_red_64x'
-          column_count: 1
-          frame_count: 1
+          image_name: 'sheet'
+          column_count: 5
+          frame_count: 20
           width: 64
           height: 64
           rate : 1
+      - !BehaviorComponent
+          name: BounceBoxBehavior
 - !GameObject
     x: 64
     y: 64
@@ -18,3 +20,5 @@
           width: 64
           height: 64
           rate : 1
+      - !BehaviorComponent
+          name: BounceBoxBehavior2

@@ -1,12 +1,12 @@
 import pygame
 
-class BounceBoxBehavior(pygame.sprite.Sprite):
+class BounceBoxBehavior2(pygame.sprite.Sprite):
 
     def __init__(self):
         super().__init__()
 
     def update(self, *args, **kwargs):
-        self.parent.rect.move_ip(self.parent.speed)
+        self.parent.rect.move_ip(1, 1)
         self.do_border_collision(kwargs['game'])
         self.do_sprite_collision(kwargs["collision_group"])
 
