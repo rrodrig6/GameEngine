@@ -1,7 +1,6 @@
 import pygame, yaml
 from pygame.math import Vector2
 
-from bounce_box_behavior import *
 
 
 class GameObject(yaml.YAMLObject, pygame.sprite.Sprite):
@@ -15,7 +14,6 @@ class GameObject(yaml.YAMLObject, pygame.sprite.Sprite):
 
     def __init__(self, x: int=0, y: int=0, components = {}):
         super().__init__()
-        print('GameObject __init__()')
         # Motion Setup
         self.position = Vector2(x,y)
         self.image = pygame.Surface((0,0))

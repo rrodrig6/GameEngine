@@ -9,6 +9,9 @@
           rate : 1
       - !BehaviorComponent
           name: BounceBoxBehavior
+      - !CollisionComponent
+          width: 128
+          height: 128
 - !GameObject
     x: 64
     y: 64
@@ -22,3 +25,6 @@
           rate : 1
       - !BehaviorComponent
           name: BounceBoxBehavior2
+      - !CollisionComponent
+          width: 128
+          height: 128

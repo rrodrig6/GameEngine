@@ -1,7 +1,7 @@
 import pygame, yaml
 
-from bounce_box_behavior import *
-from bounce_box_behavior2 import *
+from behaviors.bounce_box_behavior import *
+from behaviors.bounce_box_behavior2 import *
 
 class BehaviorComponent(yaml.YAMLObject, pygame.sprite.Sprite):
     yaml_loader = yaml.SafeLoader
@@ -10,5 +10,6 @@ class BehaviorComponent(yaml.YAMLObject, pygame.sprite.Sprite):
     @classmethod
     def from_yaml(cls, loader, node):
         behavior = loader.construct_mapping(node)
-        behavior_constructor = globals()[behavior['name']]
+        behavior_name = behavior['name']
+        behavior_constructor = globals()[behavior_name]
         return behavior_constructor()

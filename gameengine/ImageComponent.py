@@ -21,7 +21,6 @@ class ImageComponent(yaml.YAMLObject, pygame.sprite.Sprite):
             name: str = "ImageComponent",
             group_list = ['render']
     ):
-        print("ImageComponent __init__()")
         super().__init__()
         self.parent = parent
         self.sheet = ImageComponent.game.asset_manager.images[image_name]

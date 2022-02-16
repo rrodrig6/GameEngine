@@ -30,6 +30,7 @@ class Game:
         self.asset_manager = AssetManager()
 
         ImageComponent.game = Game.get_instance()
+        CollisionComponent.game = Game.get_instance()
 
         self.level = Level()
         self.level.load()

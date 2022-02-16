@@ -8,7 +8,7 @@ class BounceBoxBehavior(pygame.sprite.Sprite):
     def update(self, *args, **kwargs):
         self.parent.rect.move_ip(self.parent.speed)
         self.do_border_collision(kwargs['game'])
-        self.do_sprite_collision(kwargs["collision_group"])
+        #self.do_sprite_collision(kwargs["collision_group"])
 
 
     def do_border_collision(self, game):

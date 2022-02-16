@@ -4,11 +4,13 @@ from GameObject import *
 from PlayerObject import *
 from ImageComponent import *
 from behaviorcomponent import *
+from collisioncomponent import *
 
 class Level:
     def __init__(self):
         self.game_objects = pygame.sprite.Group()
         self.draw_objects = pygame.sprite.Group()
+        self.collision_objects = pygame.sprite.Group()
 
     def load(self):
         with open('data\objects.yml', 'r') as stream:
