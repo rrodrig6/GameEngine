@@ -14,8 +14,8 @@ level1:
             rate : 1
 
     - class: GameObject
-      x: 256
-      y: 128
+      x: 512
+      y: 512
       components:
         - class: ImageComponent
           arguments:

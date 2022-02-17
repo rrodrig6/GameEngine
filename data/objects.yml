@@ -1,4 +1,6 @@
 - !GameObject
+    x: 64
+    y: 64
     components:
       - !ImageComponent
           image_name: 'sheet'
@@ -10,11 +12,11 @@
       - !BehaviorComponent
           name: BounceBoxBehavior
       - !CollisionComponent
-          width: 128
-          height: 128
+          width: 64
+          height: 64
 - !GameObject
-    x: 64
-    y: 64
+    x: 256
+    y: 256
     components:
       - !ImageComponent
           image_name: 'square_blue_64x'
@@ -24,7 +26,7 @@
           height: 64
           rate : 1
       - !BehaviorComponent
-          name: BounceBoxBehavior2
+          name: BounceBoxBehavior
       - !CollisionComponent
-          width: 128
-          height: 128
+          width: 64
+          height: 64

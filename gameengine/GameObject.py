@@ -20,6 +20,7 @@ class GameObject(yaml.YAMLObject, pygame.sprite.Sprite):
         self.components = components
         self.rect = pygame.Rect(self.position.x, self.position.y,0,0)
         self.speed = [4,4]
+        self.collision_events = []
 
     def component_setup(self):
         for component in self.components:

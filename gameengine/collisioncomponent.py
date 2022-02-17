@@ -12,8 +12,8 @@ class CollisionComponent(yaml.YAMLObject, pygame.sprite.Sprite):
     def __init__(
             self, 
             parent = None, 
-            width: int = 128, 
-            height: int = 128, 
+            width: int = 64, 
+            height: int = 64, 
             name: str = "CollisionComponent",
             group_list = ['collision']
     ):
@@ -34,9 +34,9 @@ class CollisionComponent(yaml.YAMLObject, pygame.sprite.Sprite):
     def update(self, *args, **kwargs) -> None:
         collision_list = pygame.sprite.spritecollide(self, self.game.level.collision_objects, False)
         if(collision_list):
-            for i in collision_list:
-                if i != self:
-                    print("collided")
+            for collision_object in collision_list:
+                if collision_object != self:
+                    self.parent.collision_events.append(collision_object)
 
         if(self.parent):
             self.rect.x = self.parent.rect.x
