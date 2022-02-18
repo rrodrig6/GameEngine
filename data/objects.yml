@@ -10,7 +10,7 @@
           height: 64
           rate : 1
       - !BehaviorComponent
-          name: BounceBoxBehavior
+          name: PlayerBehavior
       - !CollisionComponent
           width: 64
           height: 64
