@@ -1,10 +1,10 @@
 import pygame, yaml
 
-from GameObject import *
-from PlayerObject import *
-from ImageComponent import *
-from behaviorcomponent import *
-from collisioncomponent import *
+from .GameObject import *
+from .PlayerObject import *
+from .ImageComponent import *
+from .behaviorcomponent import *
+from .collisioncomponent import *
 
 class Level:
     def __init__(self):

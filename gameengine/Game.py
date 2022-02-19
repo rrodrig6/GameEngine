@@ -1,9 +1,9 @@
 import sys, pygame
 
-from InputHandler import *
-from AssetManager import *
-from Level import *
-from ImageComponent import *
+from .InputHandler import *
+from .AssetManager import *
+from .Level import *
+from .ImageComponent import *
 
 class Game:
 

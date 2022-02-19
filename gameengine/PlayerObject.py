@@ -1,7 +1,7 @@
 import pygame
 
-from GameObject import *
-from InputHandler import *
+from .GameObject import *
+from .InputHandler import *
 
 class PlayerObject(GameObject):
     def __init__(self):
